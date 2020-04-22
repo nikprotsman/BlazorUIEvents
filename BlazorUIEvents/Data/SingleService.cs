@@ -7,6 +7,11 @@ namespace BlazorUIEvents.Data
 {
 	public class SingleService
 	{
+
+		//This is a simple service implementation 
+		// to outline holding application wide state, 
+		//and handling an event notification
+
 		public delegate void MyDel(object sender, EventArgs e);
 
 		public event MyDel MyEvent;
@@ -19,10 +24,5 @@ namespace BlazorUIEvents.Data
 			MyEvent?.Invoke(sender, e);
 		}
 
-	}
-
-	public class StringEventArgs : EventArgs
-	{
-		public string Value { get; set; }
 	}
 }
