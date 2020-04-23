@@ -33,7 +33,7 @@ namespace BlazorUIEvents.Pages
 			}
 
 			//Invoke StateHasChanged in an async call, helps align the thread with the Synchroniztion context
-			await InvokeAsync(() => StateHasChanged());
+			await InvokeAsync(StateHasChanged);
 		}
 
 
