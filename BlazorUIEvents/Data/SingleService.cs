@@ -12,16 +12,15 @@ namespace BlazorUIEvents.Data
 		// to outline holding application wide state, 
 		//and handling an event notification
 
-		public delegate void MyDel(object sender, EventArgs e);
-
-		public event MyDel MyEvent;
+		public Func<object, EventArgs, Task> MyEvent;
 
 		public int CountValue;
 
-		public void OnCountValueIncreased(object sender, EventArgs e)
+		public Task OnCountValueIncreased(object sender, EventArgs e)
 		{
 			CountValue++;
 			MyEvent?.Invoke(sender, e);
+			return Task.CompletedTask;
 		}
 
 	}

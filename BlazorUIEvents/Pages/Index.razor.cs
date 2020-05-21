@@ -22,7 +22,7 @@ namespace BlazorUIEvents.Pages
 		//This handler will be called whenever the event defined in MyService 
 		//triggers, and will accept EventArgs which can be passed from the event caller
 		//Note that this needs to be ASYNC so you can await the 'InvokeAsync' call below
-		private async void OnStatusChangedMethod(object sender, EventArgs e)
+		private async Task OnStatusChangedMethod(object sender, EventArgs e)
 		{
 
 			//Verify the EventArgs is the sub-type you expect
